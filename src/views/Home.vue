@@ -100,7 +100,7 @@
                 />
               </div>
               <div class="p-6 text-center bg-gradient-to-b from-[#006633] to-[#004d26] text-white">
-                <h3 class="text-xl font-bold mb-2">E. Monsieur Mamadi DOUMBOUYA</h3>
+                <h3 class="text-xl font-bold mb-2">S.E. Monsieur Mamadi DOUMBOUYA</h3>
                 <p class="text-[#fcd116] font-medium text-sm">Président de République, Chef de l'État</p>
                 <p class="text-white/80 text-xs mt-1">République de Guinée</p>
               </div>
