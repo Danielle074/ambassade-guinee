@@ -135,71 +135,18 @@
               <div v-show="openDropdowns.services" class="absolute top-full left-0 min-w-[220px] bg-white rounded-lg shadow-lg z-50 py-1 mt-1">
                 <router-link to="/consulat" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Le consulat</router-link>
                 <router-link to="/rendez-vous" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Prise de rendez-vous</router-link>
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all">Vos démarches en ligne</router-link>
+                <router-link to="/demarche-ligne" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all">Vos démarches en ligne</router-link>
               </div>
             </div>
 
-            <!-- La Guinée - Menu cliquable avec chevron -->
-            <div class="relative group">
-              <div class="flex items-center">
-                <router-link
-                  to="/construction"
-                  class="nav-item px-3 py-2 rounded-l hover:bg-[#fcd116] hover:text-[#006633] transition text-[#006633]"
-                  active-class="hover-active"
-                >
-                  La Guinée
-                </router-link>
-                <button
-                  @click.stop="toggleDropdown('guinee')"
-                  class="nav-item px-2 py-2 rounded-r hover:bg-[#fcd116] hover:text-[#006633] transition border-l border-[#006633]/20"
-                  :class="{ 'bg-[#fcd116] text-[#006633]': openDropdowns.guinee }"
-                >
-                  <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': openDropdowns.guinee }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-              <div v-show="openDropdowns.guinee" class="absolute top-full left-0 min-w-[220px] bg-white rounded-lg shadow-lg z-50 py-1 mt-1">
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Présentation de la Guinée</router-link>
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Le Président de la République</router-link>
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Le Gouvernement</router-link>
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Les institutions de l'Etat</router-link>
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all">Les anciens Ambassadeurs</router-link>
-              </div>
-            </div>
 
-            <!-- Venir en Guinée - Menu cliquable avec chevron -->
-            <div class="relative group">
-              <div class="flex items-center">
-                <router-link
-                  to="/construction"
-                  class="nav-item px-3 py-2 rounded-l hover:bg-[#fcd116] hover:text-[#006633] transition text-[#006633]"
-                  active-class="hover-active"
-                >
-                  Venir
-                </router-link>
-                <button
-                  @click.stop="toggleDropdown('venir')"
-                  class="nav-item px-2 py-2 rounded-r hover:bg-[#fcd116] hover:text-[#006633] transition border-l border-[#006633]/20"
-                  :class="{ 'bg-[#fcd116] text-[#006633]': openDropdowns.venir }"
-                >
-                  <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': openDropdowns.venir }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-              <div v-show="openDropdowns.venir" class="absolute top-full left-0 min-w-[200px] bg-white rounded-lg shadow-lg z-50 py-1 mt-1">
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Visas</router-link>
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all border-b border-gray-100">Visiter la Guinée</router-link>
-                <router-link to="/construction" class="block px-4 py-2 text-sm text-gray-800 hover:bg-[#fcd116] hover:text-[#006633] transition-all">Investir en Guinée</router-link>
-              </div>
-            </div>
 
-            <router-link to="/construction" class="nav-item px-3 py-2 rounded hover:bg-[#fcd116] hover:text-[#006633] transition" active-class="hover-active">Vidéos</router-link>
+
+
 
             <!-- Bouton de connexion -->
             <router-link
-              to="/construction"
+              to="/connexion"
               class="bg-[#fcd116] text-[#006633] px-5 py-2 rounded-full font-semibold hover:bg-[#006633] hover:text-white transition-all ml-4 flex items-center gap-2"
             >
               <i class='bx bx-user text-lg'></i>
