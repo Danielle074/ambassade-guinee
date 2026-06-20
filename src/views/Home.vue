@@ -77,73 +77,88 @@
 
   </div>
 </section>
+<!-- Message de bienvenue - 3 photos avec visages bien visibles -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-[#006633] mb-4">MOT DE BIENVENUE</h2>
+      <div class="w-24 h-1 bg-[#fcd116] mx-auto"></div>
+    </div>
 
-    <!-- Message de bienvenue - Nouvelle disposition -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-[#006633] mb-4">MOT DE BIENVENUE</h2>
-          <div class="w-24 h-1 bg-[#fcd116] mx-auto"></div>
-        </div>
+    <!-- Trois photos alignées : Président, Ministre, Ambassadeur -->
+    <div class="flex flex-col lg:flex-row items-stretch gap-8">
 
-        <!-- Disposition : Président à gauche, texte au milieu, Ambassadeur à droite -->
-        <div class="flex flex-col lg:flex-row items-stretch gap-8">
-
-          <!-- Photo du Président (gauche) -->
-          <div class="lg:w-1/4">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 h-full">
-              <div class="h-80 lg:h-96 overflow-hidden">
-                <img
-                  :src="presidentImage"
-                  alt="Président Mamadi DOUMBOUYA"
-                  class="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div class="p-6 text-center bg-gradient-to-b from-[#006633] to-[#004d26] text-white">
-                <h3 class="text-xl font-bold mb-2">S.E. Monsieur Mamadi DOUMBOUYA</h3>
-                <p class="text-[#fcd116] font-medium text-sm">Président de République, Chef de l'État</p>
-                <p class="text-white/80 text-xs mt-1">République de Guinée</p>
-              </div>
-            </div>
+      <!-- Photo du Président (gauche) -->
+      <div class="lg:w-1/3">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+          <div class="h-80 lg:h-[520px] overflow-hidden flex-shrink-0 bg-gray-100">
+            <img
+              :src="presidentImage"
+              alt="Président Mamadi DOUMBOUYA"
+              class="w-full h-full object-cover object-[center_20%] hover:scale-110 transition-transform duration-500"
+            />
           </div>
-
-          <!-- Texte de bienvenue (milieu) -->
-          <div class="lg:w-2/4">
-            <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border-l-8 border-[#fcd116] h-full flex flex-col justify-center">
-              <p class="text-lg text-gray-700 leading-relaxed mb-6 italic">
-                "Chers compatriotes,<br>
-                Chers amis et partenaires de la République de Guinée,"
-              </p>
-              <p class="text-gray-700 leading-relaxed mb-6">
-                C'est avec un réel plaisir que nous vous ouvrons les portes d'entrée de l'Ambassade de Guinée à Washington DC et celles de la Guinée toute entière via ce site web.
-              </p>
-              <p class="text-gray-700 leading-relaxed">
-                En effet, la coopération entre les Etats-unis et la République de Guinée date des premières années de l'indépendance de la Guinée. Mais, c'est en 1979 que les relations diplomatiques proprement dites ont été établies entre les deux pays. Cet élan de coopération connaitra un second souffle en 1982 avec la signature de l'Accord général de coopération et de développement, suivi de l'ouverture de l'ambassade de Guinée aux Etats-unis en 1980 et celle des Etats-unis en Guinée en 1982.
-              </p>
-            </div>
-          </div>
-
-          <!-- Photo de l'Ambassadeur (droite) -->
-          <div class="lg:w-1/4">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 h-full">
-              <div class="h-80 lg:h-96 overflow-hidden">
-                <img
-                  :src="ambassadeurImage"
-                  alt="Ambassadeur Sidibé Fatoumata KABA"
-                  class="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div class="p-6 text-center bg-gradient-to-b from-[#ce1126] to-[#a10e1f] text-white">
-                <h3 class="text-xl font-bold mb-2">S.E. Madame Sidibé Fatoumata KABA</h3>
-                <p class="text-[#fcd116] font-medium text-sm">Ambassadeur Extraordinaire et Plénipotentiaire</p>
-                <p class="text-white/80 text-xs mt-1">République de Guinée aux États-Unis</p>
-              </div>
-            </div>
+          <div class="p-8 text-center bg-gradient-to-b from-[#ce1126] to-[#a10e1f] text-white flex-grow min-h-[150px] flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">S.E. Monsieur Mamadi DOUMBOUYA</h3>
+            <p class="text-[#fcd116] font-medium text-sm">Président de la République, Chef de l'État</p>
+            <p class="text-white/80 text-xs mt-1">République de Guinée</p>
           </div>
         </div>
       </div>
-    </section>
 
+      <!-- Photo du Ministre (centre) -->
+      <div class="lg:w-1/3">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+          <div class="h-80 lg:h-[520px] overflow-hidden flex-shrink-0 bg-gray-100">
+            <img
+              :src="ministreImage"
+              alt="Dr. Morissanda KOUYATE"
+              class="w-full h-full object-cover object-[center_20%] hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-8 text-center bg-gradient-to-b from-[#fcd116] to-[#e6a800] text-gray-800 flex-grow min-h-[150px] flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Dr. Morissanda KOUYATE</h3>
+            <p class="text-[#006633] font-medium text-sm">Ministre des Affaires Étrangères,<br>de l'Intégration Africaine et des Guinéens établis à l'Étranger</p>
+            <p class="text-gray-700/80 text-xs mt-1">République de Guinée</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo de l'Ambassadeur (droite) -->
+      <div class="lg:w-1/3">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+          <div class="h-80 lg:h-[520px] overflow-hidden flex-shrink-0 bg-gray-100">
+            <img
+              :src="ambassadeurImage"
+              alt="Ibrahima N'Daïry Diallo"
+              class="w-full h-full object-cover object-[center_20%] hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-8 text-center bg-gradient-to-b from-[#006633] to-[#004d26] text-white flex-grow min-h-[150px] flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">M. Ibrahima N'Daïry Diallo</h3>
+            <p class="text-[#fcd116] font-medium text-sm">Chargé d'affaires a.i.</p>
+            <p class="text-white/80 text-xs mt-1">Ambassade de Guinée aux États-Unis</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Texte de bienvenue (en dessous des 3 photos) -->
+    <div class="mt-12 bg-gray-50 p-8 rounded-2xl shadow-lg border-l-8 border-[#fcd116]">
+      <p class="text-lg text-gray-700 leading-relaxed mb-6 italic">
+        "Chers compatriotes,<br>
+        Chers amis et partenaires de la République de Guinée,"
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        C'est avec un réel plaisir que nous vous ouvrons les portes d'entrée de l'Ambassade de Guinée à Washington DC et celles de la Guinée toute entière via ce site web.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        En effet, la coopération entre les États-Unis et la République de Guinée date des premières années de l'indépendance de la Guinée. Mais, c'est en 1979 que les relations diplomatiques proprement dites ont été établies entre les deux pays. Cet élan de coopération connaîtra un second souffle en 1982 avec la signature de l'Accord général de coopération et de développement, suivi de l'ouverture de l'ambassade de Guinée aux États-Unis en 1980 et celle des États-Unis en Guinée en 1982.
+      </p>
+    </div>
+  </div>
+</section>
     <!-- Section Services -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -453,6 +468,8 @@ import logoAmbassade from '@/assets/images/logo.png'
 // Import des photos du président et de l'ambassadeur
 import presidentImage from '@/assets/images/president.jpeg'
 import ambassadeurImage from '@/assets/images/ambassadeur.jpeg'
+// Import de la photo du Ministre
+import ministreImage from '@/assets/images/ministre.jpeg'
 
 // Import des images pour les actualités (4 cards)
 import actualite1 from '@/assets/images/actualite1.jpg'

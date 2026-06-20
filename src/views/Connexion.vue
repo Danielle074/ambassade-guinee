@@ -20,8 +20,8 @@
           <h2 class="text-2xl font-bold text-[#fcd116]">Bienvenue</h2>
         </div>
 
-        <!-- Formulaire -->
-        <form class="space-y-5" @submit.prevent="handleSubmit">
+        <!-- Formulaire (sans soumission) -->
+        <form class="space-y-5">
           <div>
             <input
               type="email"
@@ -58,12 +58,13 @@
             <a href="#" class="text-[#fcd116] hover:underline">Mot de passe oublié ?</a>
           </div>
 
-          <button
-            type="submit"
-            class="w-full bg-[#fcd116] hover:bg-[#fcd116]/60 text-white py-2 rounded-full font-semibold transition duration-200"
+          <!-- 🔗 Bouton Se connecter en tant que router-link -->
+          <router-link
+            to="/dashboard"
+            class="w-full bg-[#fcd116] hover:bg-[#fcd116]/80 text-white py-2 rounded-full font-semibold transition duration-200 text-center block"
           >
             Se connecter
-          </button>
+          </router-link>
         </form>
 
         <!-- Créer un compte -->
@@ -119,13 +120,7 @@ const goToHome = () => {
   router.push('/')
 }
 
-// Fonction de soumission du formulaire
-const handleSubmit = () => {
-  console.log('Email:', email.value)
-  console.log('Password:', password.value)
-  console.log('Remember me:', rememberMe.value)
-  router.push('/dashboard')
-}
+// (La fonction handleSubmit a été supprimée car inutile)
 </script>
 
 <style scoped>

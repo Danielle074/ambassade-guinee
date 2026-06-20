@@ -1,67 +1,67 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- Hero section avec photo de l'ambassadeur -->
-    <div class="relative bg-gradient-to-r from-[#ce1126] to-[#009460] text-white">
-      <div class="absolute inset-0 bg-black/20"></div>
-      <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <!-- Photo de l'ambassadeur -->
-          <div class="relative">
-            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-gray-200">
-              <img
-                :src="ambassadeurPhoto"
-                alt="Ambassadeur Sidibé Fatoumata KABA"
-                class="w-full h-full object-cover"
-              >
-            </div>
-            <div class="absolute -bottom-2 -right-2 bg-[#fcd116] text-gray-800 px-4 py-2 rounded-full font-bold shadow-lg">
-              S.E. Ambassadeur
-            </div>
-          </div>
-
-          <!-- Titre et fonction -->
-          <div class="text-center md:text-left">
-            <div class="inline-block bg-white/20 backdrop-blur px-4 py-1 rounded-full text-sm mb-4">
-              🇬🇳 Ambassade de Guinée aux États-Unis
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-3">
-              Sidibé née Fatoumata KABA
-            </h1>
-            <p class="text-2xl md:text-3xl mb-4 text-[#fcd116] font-semibold">
-              Ambassadeur Extraordinaire et Plénipotentiaire
-            </p>
-            <p class="text-xl opacity-90">
-              près les États-Unis d'Amérique
-            </p>
-            <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-              <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                Diplomate de carrière
-              </span>
-              <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                Depuis le 15 Décembre 2023
-              </span>
-            </div>
-          </div>
+ <!-- Hero section avec photo de l'ambassadeur -->
+<div class="relative bg-gradient-to-r from-[#ce1126] to-[#009460] text-white">
+  <div class="absolute inset-0 bg-black/20"></div>
+  <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
+    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+      <!-- Photo de l'ambassadeur (agrandie) -->
+      <div class="relative flex-shrink-0">
+        <div class="w-56 h-56 md:w-80 md:h-80 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-gray-200">
+          <img
+            :src="ambassadeurPhoto"
+            :alt="`Chargé d'affaires ${ambassadeur.nom}`"
+            class="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
+          />
+        </div>
+        <div class="absolute -bottom-2 -right-2 bg-[#fcd116] text-gray-800 px-4 py-2 rounded-full font-bold shadow-lg text-sm">
+          Chargé d'affaires a.i.
         </div>
       </div>
 
-      <!-- Wave decoration -->
-      <div class="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto">
-          <path fill="#f3f4f6" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
-        </svg>
+      <!-- Titre et fonction (inchangé) -->
+      <div class="text-center md:text-left">
+        <div class="inline-block bg-white/20 backdrop-blur px-4 py-1 rounded-full text-sm mb-4">
+          🇬🇳 Ambassade de Guinée aux États-Unis
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-3">
+          {{ ambassadeur.nom }}
+        </h1>
+        <p class="text-2xl md:text-3xl mb-4 text-[#fcd116] font-semibold">
+          Chargé d'affaires a.i.
+        </p>
+        <p class="text-xl opacity-90">
+          près les États-Unis d'Amérique
+        </p>
+        <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+          <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            Ingénieur et Diplomate
+          </span>
+          <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            En poste depuis 2024
+          </span>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- Wave decoration -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto">
+      <path fill="#f3f4f6" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </div>
+</div>
 
     <!-- Contenu principal -->
     <div class="max-w-7xl mx-auto px-4 py-12">
-      <!-- Badge historique -->
+      <!-- Badge de présentation -->
       <div class="bg-gradient-to-r from-[#fcd116] to-[#ce1126] text-white rounded-2xl p-6 mb-12 shadow-xl">
         <div class="flex items-center gap-4">
           <div class="bg-white/20 p-3 rounded-full">
@@ -70,7 +70,7 @@
             </svg>
           </div>
           <p class="text-lg md:text-xl font-semibold">
-            🏛️ Première femme à occuper ce poste depuis l'établissement des relations diplomatiques entre les États-Unis et la Guinée en 1959
+            🎯 Un diplomate de haut rang, fort d'une double compétence d'ingénieur et de manager, au service de la Guinée aux États-Unis.
           </p>
         </div>
       </div>
@@ -88,85 +88,45 @@
 
             <div class="prose prose-lg max-w-none">
               <div class="flex items-center gap-3 bg-gray-50 p-4 rounded-xl mb-6">
-                <span class="text-2xl">🎂</span>
-                <span class="text-gray-700"><strong>Née le 16 mai 1956</strong> à Kankan, capitale régionale de la Haute Guinée</span>
+                <span class="text-2xl">📍</span>
+                <span class="text-gray-700"><strong>Né à Mamou</strong>, en République de Guinée</span>
               </div>
 
               <h3 class="text-xl font-bold text-[#ce1126] mb-3">Formation</h3>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#fcd116]">
-                  <p class="font-semibold">📚 Maîtrise</p>
-                  <p class="text-gray-600">Économie et Philosophie - Université de Conakry</p>
+                  <p class="font-semibold">📚 Ingénieur d'État</p>
+                  <p class="text-gray-600">Génie Électrique – École Mohammedia d'Ingénieurs (EMI), Rabat, Maroc (2004)</p>
                 </div>
                 <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-[#009460]">
-                  <p class="font-semibold">🌍 Diplôme d'Études Supérieures</p>
-                  <p class="text-gray-600">Relations Internationales - Institut des Relations Internationales du Cameroun</p>
+                  <p class="font-semibold">📊 Master</p>
+                  <p class="text-gray-600">Management et Administration des Entreprises – Université Pierre Mendes de Grenoble, France</p>
                 </div>
               </div>
 
-              <h3 class="text-xl font-bold text-[#ce1126] mb-3">Carrière politique</h3>
+              <h3 class="text-xl font-bold text-[#ce1126] mb-3">Carrière diplomatique</h3>
               <p class="text-gray-700 mb-4">
-                Madame Sidibé Fatoumata KABA est une ancienne <span class="font-bold text-[#ce1126]">Ministre des Affaires Étrangères et des Guinéens de l'Étranger (2005-2006)</span>,
-                puis de la <span class="font-bold text-[#009460]">Coopération Internationale (2006-2007)</span> sous le régime du Président feu Lansana CONTÉ.
+                Fort d'une solide expérience dans les secteurs public et privé, M. Ibrahima N'Daïry Diallo a été nommé <span class="font-bold text-[#ce1126]">Conseiller Ministre</span> puis <span class="font-bold text-[#009460]">Chargé d'affaires a.i.</span> à l'Ambassade de Guinée à Washington D.C.[reference:4]. C'est à ce titre qu'il représente aujourd'hui la Guinée aux États-Unis.
               </p>
 
-              <h3 class="text-xl font-bold text-[#ce1126] mb-3">Parcours diplomatique</h3>
+              <h3 class="text-xl font-bold text-[#ce1126] mb-3">Parcours professionnel</h3>
               <div class="space-y-3">
                 <div class="flex items-start gap-3">
-                  <span class="text-[#ce1126] font-bold">1982</span>
-                  <span>Entrée dans la carrière diplomatique</span>
+                  <span class="text-[#ce1126] font-bold">2024</span>
+                  <span>Nomination en tant que Chargé d'affaires a.i. près les États-Unis</span>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="text-[#fcd116] font-bold">1995</span>
-                  <span>Cheffe de Division au Ministère des Affaires Étrangères</span>
+                  <span class="text-[#fcd116] font-bold">2022-2024</span>
+                  <span>Directeur Général de la SNCFG (Société Nationale des Chemins de Fer de Guinée)</span>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="text-[#009460] font-bold">1997</span>
-                  <span>Directrice Nationale Adjointe des Affaires Politiques et Culturelles</span>
+                  <span class="text-[#009460] font-bold">2015-2022</span>
+                  <span>Directeur des Systèmes d'Information d'EDG S.A, Assistant du Ministre du Budget, Conseiller Économique et Financier</span>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="text-[#ce1126] font-bold">2000</span>
-                  <span>Directrice Nationale des Affaires Politiques et Culturelles</span>
+                  <span class="text-[#ce1126] font-bold">2004-2015</span>
+                  <span>Ingénieur en conception de circuits intégrés chez STMicroelectronics et Texas Instruments (Maroc, France)</span>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Expériences internationales -->
-          <div class="bg-white rounded-2xl shadow-lg p-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-              <span class="bg-[#fcd116] w-1 h-8 mr-3"></span>
-              Postes d'Ambassadeur
-            </h2>
-
-            <div class="space-y-6">
-              <div class="relative pl-8 border-l-4 border-[#ce1126]">
-                <div class="absolute -left-3 top-0 w-6 h-6 bg-[#ce1126] rounded-full flex items-center justify-center text-white text-sm">1</div>
-                <h3 class="font-bold text-xl">2000 - 2002</h3>
-                <p class="text-lg font-semibold">Ambassadeur Extraordinaire et Plénipotentiaire</p>
-                <p class="text-gray-600">République Fédérale du Nigéria, CÉDÉAO, Bénin et Togo</p>
-              </div>
-
-              <div class="relative pl-8 border-l-4 border-[#fcd116]">
-                <div class="absolute -left-3 top-0 w-6 h-6 bg-[#fcd116] rounded-full flex items-center justify-center text-gray-800 text-sm">2</div>
-                <h3 class="font-bold text-xl">2013 - 2018</h3>
-                <p class="text-lg font-semibold">Ambassadeur de la République de Guinée</p>
-                <p class="text-gray-600">République Fédérale d'Éthiopie</p>
-              </div>
-
-              <div class="relative pl-8 border-l-4 border-[#009460]">
-                <div class="absolute -left-3 top-0 w-6 h-6 bg-[#009460] rounded-full flex items-center justify-center text-white text-sm">3</div>
-                <h3 class="font-bold text-xl">2018 - 2020</h3>
-                <p class="text-lg font-semibold">Représentante Permanente</p>
-                <p class="text-gray-600">Nations Unies - New York</p>
-              </div>
-
-              <div class="relative pl-8 border-l-4 border-[#ce1126] bg-gray-50 p-4 rounded-lg">
-                <div class="absolute -left-3 top-4 w-6 h-6 bg-[#ce1126] rounded-full flex items-center justify-center text-white text-sm">4</div>
-                <h3 class="font-bold text-xl">15 Décembre 2023 - Présent</h3>
-                <p class="text-lg font-semibold">Ambassadeur Extraordinaire et Plénipotentiaire</p>
-                <p class="text-gray-600">près les États-Unis d'Amérique</p>
-                <p class="text-sm text-[#ce1126] mt-2 font-semibold">🏆 Nommée par S.E. Colonel Mamadi DOUMBOUYA, Président de la Transition</p>
               </div>
             </div>
           </div>
@@ -186,8 +146,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="font-semibold">Commission de l'Union Africaine</p>
-                  <p class="text-sm text-gray-300">"Apport de qualité à l'Institution"</p>
+                  <p class="font-semibold">Médaille d'Or</p>
+                  <p class="text-sm text-gray-300">Festival du Mérite du Ministère Marocain de l'Enseignement Supérieur</p>
                 </div>
               </div>
 
@@ -198,8 +158,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="font-semibold">CÉDÉAO</p>
-                  <p class="text-sm text-gray-300">"Contribution aux efforts de Paix et de Sécurité"</p>
+                  <p class="font-semibold">Félicitations Royales</p>
+                  <p class="text-sm text-gray-300">Du Roi Mohammed VI du Maroc (2004)</p>
                 </div>
               </div>
             </div>
@@ -217,22 +177,12 @@
             <div class="space-y-4">
               <div>
                 <p class="text-sm text-gray-500">Nom complet</p>
-                <p class="font-semibold">Sidibé née Fatoumata KABA</p>
-              </div>
-
-              <div>
-                <p class="text-sm text-gray-500">Date de naissance</p>
-                <p class="font-semibold">16 mai 1956</p>
+                <p class="font-semibold">Ibrahima N'Daïry Diallo</p>
               </div>
 
               <div>
                 <p class="text-sm text-gray-500">Lieu de naissance</p>
-                <p class="font-semibold">Kankan, Haute Guinée</p>
-              </div>
-
-              <div>
-                <p class="text-sm text-gray-500">Situation familiale</p>
-                <p class="font-semibold">Mariée, mère de 3 enfants</p>
+                <p class="font-semibold">Mamou, République de Guinée</p>
               </div>
 
               <div>
@@ -240,6 +190,7 @@
                 <div class="flex gap-2 mt-1">
                   <span class="bg-[#ce1126]/10 text-[#ce1126] px-3 py-1 rounded-full text-sm font-medium">Français</span>
                   <span class="bg-[#009460]/10 text-[#009460] px-3 py-1 rounded-full text-sm font-medium">Anglais</span>
+                  <span class="bg-[#fcd116]/20 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Arabe</span>
                 </div>
               </div>
             </div>
@@ -254,23 +205,19 @@
             <div class="space-y-3">
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 bg-[#ce1126] rounded-full"></span>
-                <span>Diplomatie Multilatérale</span>
+                <span>Diplomatie et Relations Internationales</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 bg-[#fcd116] rounded-full"></span>
-                <span>Négociation Internationale</span>
+                <span>Management et Administration</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 bg-[#009460] rounded-full"></span>
-                <span>Prévention des conflits</span>
+                <span>Gestion de Projets et Stratégie</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="w-2 h-2 bg-[#ce1126] rounded-full"></span>
-                <span>Gestion et Règlement des conflits</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 bg-[#fcd116] rounded-full"></span>
-                <span>Relations Internationales</span>
+                <span>Négociation et Plaidoyer</span>
               </div>
             </div>
           </div>
@@ -286,7 +233,7 @@
                 </div>
                 <div>
                   <p class="font-semibold">Nations Unies</p>
-                  <p class="text-sm opacity-90">Ancienne Représentante Permanente</p>
+                  <p class="text-sm opacity-90">Représentant de la Guinée</p>
                 </div>
               </div>
 
@@ -296,17 +243,7 @@
                 </div>
                 <div>
                   <p class="font-semibold">Union Africaine</p>
-                  <p class="text-sm opacity-90">Décorée par l'institution</p>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <span class="text-lg">🤝</span>
-                </div>
-                <div>
-                  <p class="font-semibold">CÉDÉAO</p>
-                  <p class="text-sm opacity-90">Contribution à la paix</p>
+                  <p class="text-sm opacity-90">Participation active aux sommets</p>
                 </div>
               </div>
             </div>
@@ -334,14 +271,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import ambassadeurPhoto from '@/assets/images/ambassadeur.jpeg' // Import de la photo
+import ambassadeurPhoto from '@/assets/images/ambassadeur.jpeg' // Assurez-vous que le chemin est correct
 
-// Vous pouvez aussi définir d'autres données si nécessaire
+// Données de l'ambassadeur
 const ambassadeur = ref({
-  nom: 'Sidibé née Fatoumata KABA',
-  titre: 'Ambassadeur Extraordinaire et Plénipotentiaire',
-  dateNaissance: '16 mai 1956',
-  lieuNaissance: 'Kankan, Haute Guinée'
+  nom: "Ibrahima N'Daïry Diallo",
+  titre: "Chargé d'affaires a.i."
 })
 </script>
 
